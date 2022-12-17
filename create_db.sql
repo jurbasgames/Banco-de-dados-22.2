@@ -1,18 +1,18 @@
 CREATE DATABASE DatabaseBD;
 USE DatabaseBD;
 CREATE TABLE Faixa_Etaria (
-    ID_Faixa_Etaria INT,
+    ID_Faixa_Etaria INT AUTO_INCREMENT,
     Intervalo VARCHAR(255) NOT NULL,
     PRIMARY KEY (ID_Faixa_Etaria)
 ); 
 CREATE TABLE CRE ( 
-    ID_CRE int,
+    ID_CRE int AUTO_INCREMENT,
     Numero_de_Matriculas int NOT NULL,
     Numero_de_Escolas int NOT NULL,
     PRIMARY KEY(ID_CRE)
 ); 
 CREATE TABLE Bairro ( 
-    ID_Bairro int,
+    ID_Bairro int AUTO_INCREMENT,
     Nome varchar(255) NOT NULL,
     ID_CRE int,
     PRIMARY KEY(ID_Bairro),
@@ -20,7 +20,7 @@ CREATE TABLE Bairro (
 ); 
 CREATE TABLE Escola ( 
     ID_Bairro int,
-    ID_Escola int,
+    ID_Escola int AUTO_INCREMENT,
     Nome varchar(255) NOT NULL,
     Endereco varchar(255) NOT NULL,
     PRIMARY KEY(ID_Escola),
