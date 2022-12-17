@@ -1,0 +1,4 @@
+pip==22.3
+mysql-connector-python==8.0.31
+Flask==2.2.2
+Faker==15.3.4
