@@ -29,6 +29,7 @@ CREATE TABLE Escola (
 CREATE TABLE Analfabetismo (
     ID_Bairro int,
     ID_Faixa_Etaria int,
+    Taxa float  NOT NULL,
     FOREIGN KEY (ID_Bairro) REFERENCES Bairro(ID_Bairro),
     FOREIGN KEY (ID_Faixa_Etaria) REFERENCES Faixa_Etaria(ID_Faixa_Etaria)
 );

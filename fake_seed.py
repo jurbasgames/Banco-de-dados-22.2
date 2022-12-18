@@ -13,11 +13,7 @@ mycursor = mydb.cursor()
 
 fake = Faker()
 Faker.seed(0)
-# Inserções
-add_bairo = "INSERT INTO `bairro` VALUES (%s, %d)"
 
-
-# Criar bairros
 faixa_etaria = ["7 a 14 anos", "10 a 14 anos", "15 a 17 anos",
                 "18 a 24 anos", "15 anos ou mais", "25 anos ou mais"]
 
@@ -51,11 +47,11 @@ for i in range(5):
         bairro_id = mycursor.lastrowid
 
         for k in faixa_etaria:
-            analfabetismo = (bairro_id, k[0])
+            analfabetismo = (bairro_id, k[0], random.randint(0, 100)/100)
             mycursor.execute(
-                f"INSERT INTO databasebd.analfabetismo (ID_Bairro, ID_Faixa_Etaria) VALUES {(analfabetismo)}")
+                f"INSERT INTO databasebd.analfabetismo (ID_Bairro, ID_Faixa_Etaria, Taxa) VALUES {(analfabetismo)}")
             print(
-                f"INSERT INTO databasebd.analfabetismo (ID_Bairro, ID_Faixa_Etaria) VALUES {(analfabetismo)}")
+                f"INSERT INTO databasebd.analfabetismo (ID_Bairro, ID_Faixa_Etaria, Taxa) VALUES {(analfabetismo)}")
         for l in range(10):
             escola = (bairro_id, fake.name(), fake.address())
             mycursor.execute(
