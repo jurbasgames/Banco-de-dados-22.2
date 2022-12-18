@@ -2,13 +2,13 @@ CREATE DATABASE DatabaseBD;
 USE DatabaseBD;
 CREATE TABLE Faixa_Etaria (
     ID_Faixa_Etaria INT AUTO_INCREMENT,
-    Intervalo VARCHAR(255) NOT NULL,
+    Intervalo VARCHAR(255) UNIQUE NOT NULL,
     PRIMARY KEY (ID_Faixa_Etaria)
 ); 
 CREATE TABLE CRE ( 
     ID_CRE int AUTO_INCREMENT,
-    Numero_de_Matriculas int NOT NULL,
-    Numero_de_Escolas int NOT NULL,
+    Numero_de_Matriculas int,
+    Numero_de_Escolas int,
     PRIMARY KEY(ID_CRE)
 ); 
 CREATE TABLE Bairro ( 
