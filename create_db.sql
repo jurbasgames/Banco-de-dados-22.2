@@ -18,7 +18,7 @@ CREATE TABLE Bairro (
     Baixa_Renda int,
     Acima_Meio_SM int,
     Qtd_Familias_Nao int,
-	Qtd_Familias_Sim int,
+    Qtd_Familias_Sim int,
     Nome varchar(255) NOT NULL,
     ID_CRE int,
     PRIMARY KEY(ID_Bairro),
