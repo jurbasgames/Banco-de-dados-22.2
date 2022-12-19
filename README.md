@@ -4,11 +4,11 @@ Trabalho final de banco de dados para o período 22.2.
 
 Modelo Conceitual
 
-![Modelagem Conceitual](https://user-images.githubusercontent.com/79494392/208329019-9d5d4871-bbfb-462c-9668-7c5817e9faf9.png)
+![modelagem conceitual ](https://user-images.githubusercontent.com/79494392/208329561-4c91c16e-20d1-4f5b-9448-043405d02dd2.png)
 
 Modelo Lógico
 
-![Modelagem Lógica](https://user-images.githubusercontent.com/79494392/208329038-e6b8ee30-0a31-4513-8527-66e342ccee5c.png)
+![modelagem logica](https://user-images.githubusercontent.com/79494392/208329578-45c09cd4-817b-4298-a131-c24ed8e0a677.png)
 
 ## Instalação
 
