@@ -30,7 +30,7 @@ with open('./tables/Bairro.csv', 'r', newline='', encoding='utf8') as csvfile:
 
     # Cria as faixas etárias
 
-    for field in reader.fieldnames[2:]:
+    for field in reader.fieldnames[2:8]:
         intervalo = (field)
         mycursor.execute((
             f"INSERT INTO databasebd.faixa_etaria (Intervalo) VALUES ('{(intervalo)}')"))
@@ -38,12 +38,14 @@ with open('./tables/Bairro.csv', 'r', newline='', encoding='utf8') as csvfile:
             f"INSERT INTO databasebd.faixa_etaria (Intervalo) VALUES ('{(intervalo)}')")
 
     # Cria bairros e insere relacionamento em Analfabetismo
+
     for row in reader:
-        bairro = (row["Nome"], int(row["ID_CRE"]))
+        bairro = (row["Nome"], int(row["ID_CRE"]), int(row["Extrema Pobreza"]), int(row["Pobreza"]),
+                  int(row["Baixa Renda"]), int(row["Acima de 1/2 SM"]), int(row['Quantidade de Famílias não']), int(row['Quantidade de Famílias sim']))
         mycursor.execute(
-            f"INSERT INTO databasebd.bairro (Nome, ID_CRE) VALUES {(bairro)}")
+            f"INSERT INTO databasebd.bairro (Nome, ID_CRE, Pobreza, Extrema_Pobreza, Baixa_Renda, Acima_Meio_SM, Qtd_Familias_Nao, Qtd_Familias_Sim) VALUES {(bairro)}")
         print(
-            f"INSERT INTO databasebd.bairro (Nome, ID_CRE) VALUES {(bairro)}")
+            f"INSERT INTO databasebd.bairro (Nome, ID_CRE, Pobreza, Extrema_Pobreza, Baixa_Renda, Acima_Meio_SM, Qtd_Familias_Nao, Qtd_Familias_Sim) VALUES {(bairro)}")
         id_bairro = mycursor.lastrowid
 
         mycursor.execute(

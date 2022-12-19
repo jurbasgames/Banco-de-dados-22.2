@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block title %} BD 22.2 - Bairros {% endblock %} {%
+block content %}
+
+<h1><b>{{ bairro[0] }}</b></h1>
+
+<img src="/static/{{bairro[0]}}_analfabetismo.png" />
+<img src="/static/{{bairro[0]}}_renda.png" />
+
+{% for i in table %} {{i}} {% endfor %} {% endblock %}

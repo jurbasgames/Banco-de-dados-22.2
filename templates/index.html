@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %} BD 22.2 - Bairros {% endblock %} {%
+block content %}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">CRE</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for bairro in bairros %}
+    <tr>
+      <th class="list-group-item" scope="row">
+        <a
+          style="color: #212529; text-decoration: none"
+          href="bairro/{{ bairro[2] }}"
+          >{{ bairro[0] | title}}</a
+        >
+      </th>
+      <td>{{ bairro[1] | title }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
