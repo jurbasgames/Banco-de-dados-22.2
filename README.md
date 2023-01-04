@@ -13,5 +13,23 @@ Modelo Lógico
 ## Instalação
 
 ```sh
-$ pip3 install -r requirements.txt
+$ python -m pip install -r requirements.txt
+```
+
+## Criação do banco de dados
+
+```sh
+$ python create_database.py
+```
+
+## Popula banco de dados
+
+```sh
+$ python seeder.py
+```
+
+## Roda a aplicação
+
+```sh
+$ python -m flask run
 ```
