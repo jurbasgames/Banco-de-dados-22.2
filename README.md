@@ -22,7 +22,7 @@ $ python -m pip install -r requirements.txt
 $ python create_database.py
 ```
 
-## Popula banco de dados
+## Popular banco de dados
 
 ```sh
 $ python seeder.py
