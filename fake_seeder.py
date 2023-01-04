@@ -1,11 +1,19 @@
+import os
 from faker import Faker
 import mysql.connector
 import random
+from dotenv import load_dotenv
+
+load_dotenv()
+
+host = os.environ['host']
+user = os.environ['user']
+password = os.environ['password']
 
 mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
+    host=host,
+    user=user,
+    password=password,
     database="databasebd"
 )
 

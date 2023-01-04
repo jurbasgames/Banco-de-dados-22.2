@@ -3,3 +3,4 @@ mysql-connector-python==8.0.31
 Flask==2.2.2
 Faker==15.3.4
 matplotlib==3.6.2
+python-dotenv==0.21.0

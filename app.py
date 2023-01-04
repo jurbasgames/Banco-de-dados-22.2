@@ -1,18 +1,25 @@
 # save this as app.py
+import os
 import matplotlib.pyplot as plt
 import mysql.connector
 from flask import Flask, render_template, request
 import matplotlib
+from dotenv import load_dotenv
+
+load_dotenv()
 matplotlib.use('Agg')
 
+host = os.environ['host']
+user = os.environ['user']
+password = os.environ['password']
 
 app = Flask(__name__)
 
 
 mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
+    host=host,
+    user=user,
+    password=password,
     database="databasebd"
 )
 

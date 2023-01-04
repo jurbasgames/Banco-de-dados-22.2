@@ -1,12 +1,20 @@
 import csv
+import os
 import mysql.connector
+from dotenv import load_dotenv
+
+load_dotenv()
+
+host = os.environ['host']
+user = os.environ['user']
+password = os.environ['password']
 
 mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="databasebd"
-)
+    host=host,
+    user=user,
+    password=password,
+    database="databasebd")
+
 
 mycursor = mydb.cursor()
 
